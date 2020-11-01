@@ -3,6 +3,9 @@
 JCalendar is an Android library for displaying one month later and a month ago from the device's current date.
 ## Screenshot and gif
 
+<img src="gallery/screenshot.jpg" width="45%"></img> 
+<img src="gallery/jcalendar.gif" width="45%"></img> 
+
 
 ## Installation
 
@@ -97,3 +100,12 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 ## Related Links
+<a href="https://github.com/jhonnyx2012/HorizontalPicker">Horizontal Picker</a>
+<br/>
+<a href="https://github.com/eloyzone/jalali-calendar">jalali-calendar</a>
+<br/>
+<a href="https://developer.android.com/studio/write/java8-support-table">Use Java-8 apis in the android</a>
+<br/>
+<a href="https://medium.com/@douglas.iacovelli/the-beauty-of-custom-views-and-how-to-do-it-79c7d78e2088">The beauty of Custom Views in Android and How to do it!</a>
+<br/>
+<a href="https://medium.com/@anujguptawork/how-to-create-your-own-android-library-and-publish-it-750e0f7481bf">How to create your own Android Library and publish it</a>
