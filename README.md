@@ -21,9 +21,9 @@ allprojects {
 ```
 Step 2. Add the dependency
 ```groovy
-	dependencies {
-	        implementation 'com.github.Muhammad-Javad:JCalender:0.0.1-alpha'
-	}
+dependencies {
+	implementation 'com.github.Muhammad-Javad:JCalender:0.0.1-alpha'
+}
 ```
 ## Usage
 First of all, you must add JCalendar to your layout.
