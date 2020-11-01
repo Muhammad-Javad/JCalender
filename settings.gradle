@@ -1,0 +1,3 @@
+include ':JCalendar'
+include ':app'
+rootProject.name = "JCalender Example"

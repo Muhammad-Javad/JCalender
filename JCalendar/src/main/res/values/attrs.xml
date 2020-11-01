@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <declare-styleable name="JCalendarView">-->
+<!--        <attr name="selectedBackgroundColor" format="reference"/>-->
+<!--        <attr name="selectedDayOfWeekTextColor" format="color"/>-->
+<!--        <attr name="selectedDayOfMonthTextColor" format="color"/>-->
+
+<!--        <attr name="normalBackgroundColor" format="reference"/>-->
+<!--        <attr name="normalDayOfWeekTextColor" format="color"/>-->
+<!--        <attr name="normalDayOfMonthTextColor" format="color"/>-->
+<!--        -->
+<!--        <attr name="monthTextColor" format="color"/>-->
+<!--    </declare-styleable>-->
+
+</resources>

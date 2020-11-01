@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="corner_all_18dp">18dp</dimen>
+    <dimen name="width_all_60dp">60dp</dimen>
+    <dimen name="height_all_80dp">80dp</dimen>
+    <dimen name="margin_all_3dp">3dp</dimen>
+</resources>
