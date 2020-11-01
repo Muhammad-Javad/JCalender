@@ -129,7 +129,6 @@ class JCalendarAdapter(
             backgroundRes: Drawable
         ) = with(itemView) {
 
-            Log.i(TAG, "onBind: triggered")
 
             daysOfMonth = textView_days_of_month_selected
             daysOfWeek = textView_day_of_week_selected
@@ -238,92 +237,22 @@ class JCalendarAdapter(
             backgroundRes: Drawable
         ) = with(itemView) {
 
-            daysOfMonth = textView_days_of_month_normal
-            daysOfWeek = textView_day_of_week_normal
-            model = jModel
-
-            textView_days_of_month_normal.text = jModel.dayOfMonth.toString()
             textView_day_of_week_normal.text = jModel.dayOfWeek
+            textView_days_of_month_normal.text = jModel.dayOfMonth.toString()
 
-            textView_days_of_month_normal.setTextColor(
-                ContextCompat.getColor(
-                    context,
-                    dayOfMonthTextColor
-                )
-            )
-            textView_day_of_week_normal.setTextColor(
-                ContextCompat.getColor(
-                    context,
-                    nameOfWeekTextColor
-                )
-            )
+            textView_day_of_week_normal.setTextColor(ContextCompat.getColor(context, nameOfWeekTextColor))
+            textView_days_of_month_normal.setTextColor(ContextCompat.getColor(context, dayOfMonthTextColor))
             background = backgroundRes
 
-            var holder = this@NormalViewHolder
             setOnClickListener {
-                //when user double tap on item
-                if (jModel !== selected) {
-                    jModel.selected = true
-                    selected.selected = false
-                    selected = jModel
 
-                    //send model into callback
-                    onJItemClickListener.invoke(jModel)
+                jModel.selected = true
+                selected.selected = false
+                selected = jModel
 
-                    //set ui of selecting item
-                    textView_days_of_month_normal.setTextColor(
-                        androidx.core.content.ContextCompat.getColor(
-                            context,
-                            dayOfMonthTextColorSelected
-                        )
-                    )
-                    textView_day_of_week_normal.setTextColor(
-                        androidx.core.content.ContextCompat.getColor(
-                            context,
-                            nameOfWeekTextColorSelected
-                        )
-                    )
-                    background = backgroundResSelected
+                onJItemClickListener.invoke(selected)
+                notifyDataSetChanged()
 
-                    //set ui of previous selected item
-                    if (selectedViewHolder is NormalViewHolder) {
-                        with(selectedViewHolder.itemView) {
-
-                            textView_days_of_month_normal.setTextColor(
-                                ContextCompat.getColor(
-                                    context,
-                                    dayOfMonthTextColorNormal
-                                )
-                            )
-                            textView_day_of_week_normal.setTextColor(
-                                ContextCompat.getColor(
-                                    context,
-                                    nameOfWeekTextColorNormal
-                                )
-                            )
-                            background = backgroundResNormal
-                        }
-                    } else if (selectedViewHolder is SelectedViewHolder) {
-                        with(selectedViewHolder.itemView) {
-
-                            textView_days_of_month_selected.setTextColor(
-                                ContextCompat.getColor(
-                                    context,
-                                    dayOfMonthTextColorNormal
-                                )
-                            )
-                            textView_day_of_week_selected.setTextColor(
-                                ContextCompat.getColor(
-                                    context,
-                                    nameOfWeekTextColorNormal
-                                )
-                            )
-                            background = backgroundResNormal
-                        }
-                    }
-                    selectedViewHolder = holder
-                    notifyDataSetChanged()
-                }
             }
 
 

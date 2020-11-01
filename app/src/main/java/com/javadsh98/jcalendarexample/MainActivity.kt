@@ -1,13 +1,17 @@
 package com.javadsh98.jcalendarexample
 
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.core.content.res.ResourcesCompat
 import com.javadsh98.jcalendar.JGregorianListener
 import com.javadsh98.jcalendar.JJalaliListener
 import kotlinx.android.synthetic.main.activity_main.*
-
 class MainActivity : AppCompatActivity() {
+
+    val Tag = "my date"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

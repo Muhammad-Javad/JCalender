@@ -3,6 +3,7 @@ package com.javadsh98.jcalendar
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
+import android.util.Log
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -91,12 +92,15 @@ class JCalendarView :ConstraintLayout {
 
                 nameOfMonth.text = model.monthName
 
+                val gregorian = model.intoGregorian()
+                val jalali = model.intoJalali()
+
                 jalaliListener?.let {
-                    it.onJalali(model.intoJalali())
+                    it.onJalali(jalali)
                 }
 
                 gregorianListener?.let {
-                    it.onGregorian(model.intoGregorian())
+                    it.onGregorian(gregorian)
                 }
 
             }
