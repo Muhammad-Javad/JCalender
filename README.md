@@ -22,7 +22,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-	implementation 'com.github.Muhammad-Javad:JCalender:0.0.1-alpha'
+	implementation 'com.github.Muhammad-Javad:JCalender:0.0.2-alpha'
 }
 ```
 ## Usage
