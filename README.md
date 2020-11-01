@@ -9,8 +9,8 @@ JCalendar is an Android library for displaying one month later and a month ago f
 
 ## Installation
 
-Add Jitpack to your project build.gralde file.
-
+Step 1. Add the JitPack repository to your build file.
+Add it in your root build.gradle at the end of repositories:
 ```groovy
 allprojects {
    repositories {
@@ -19,7 +19,12 @@ allprojects {
    }
 }
 ```
-
+Step 2. Add the dependency
+```groovy
+	dependencies {
+	        implementation 'com.github.Muhammad-Javad:JCalender:0.0.1-alpha'
+	}
+```
 ## Usage
 First of all, you must add JCalendar to your layout.
 ```xml
